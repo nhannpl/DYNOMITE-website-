@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List View</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-section">
+        <img class="header-picture" src="pictures/UM-Logo.svg" style="cursor: pointer" onclick="location.href='index.html'">
+
+        
+          <button class="home-button">
+            <a class="home-button-link" href="index.html">
+             <img class="home-icon" src="icons/home.png">
+            </a>
+          </button>
+        
+      </div>
+
+      <div class="middle-section">
+        <input class="search-bar" id="searchBar" type="textbox" placeholder="Search Restaurants...">
+
+        
+          <button class="search-button" id="searchButton">
+            <a class="search-button-link">
+              <img class="search-icon" src="icons/search.svg">
+            </a>
+          </button>
+      
+      </div>
+
+      <div class="right-section">
+        <button class="page-setting" id="page-setting">
+          <img class="account-icon" src="icons/hamburger-menu.svg">
+        </button>
+      </div>
+    </div>
+
+    <div id="filters" class="filter">
+      <div class="filter-spacer"></div>
+      <div class="filter-pane">
+        <p class="filter-title">Filter</p>
+        <div class="filter-category">
+          <p class="filter-category-title">Food Type</p>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="Hamburger" type="checkbox">
+            <p class="category-option-title">Hamburgers</p>
+          </div>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="Sandwich" type="checkbox">
+            <p class="category-option-title">Sandwich</p>
+          </div>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="Soup" type="checkbox">
+            <p class="category-option-title">Soups</p>
+          </div>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="Salad" type="checkbox">
+            <p class="category-option-title">Salad</p>
+          </div>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="Sides" type="checkbox">
+            <p class="category-option-title">Sides</p>
+          </div>
+        </div>
+          
+        <div class="filter-category">
+          <p class="filter-category-title">Tags</p>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="Halal" type="checkbox">
+            <p class="category-option-title">Halal</p>
+          </div>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="Vegetarian" type="checkbox">
+            <p class="category-option-title">Vegetarian</p>
+          </div>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="Gluten-Free" type="checkbox">
+            <p class="category-option-title">Gluten Free</p>
+          </div>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="No-Nuts" type="checkbox">
+            <p class="category-option-title">No-Nuts</p>
+          </div>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="Low-Fat" type="checkbox">
+            <p class="category-option-title">Low Fat</p>
+          </div>
+          <div class="category-option">
+            <input class="category-option-checkbox" value="No-Sugar" type="checkbox">
+            <p class="category-option-title">No Sugar</p>
+          </div>
+        </div>
+          
+      </div>
+      <div class="filter-spacer"></div>
+    </div>
+
+    <div class="website-content-cards" id="listViewContent">
+    </div>
+
+    <!--THis is the page setting (hamburger menu) pop up -->
+
+<div id="modal" class="modal close">
+  <div class="modal-container" id="modal-container">
+    <div class="modal-content" id="modal-content">
+      <p class="login-text">You are already logged in!</p>
+      <button id="login-OK" class="login-OK-button">OK</button>
+    </div>
+      <span id="close-modal" class="close-modal">&times;</span>
+  </div>
+</div>
+
+<!--This is the page setting (hamburger menu) pop up -->
+
+
+
+    <!--THis is the WARNING pop up -->
+
+    <div id="modal-warning" class="modal-warning close">
+      <div class="modal-warning-container" id="modal-warning-container">
+        <div class="modal-warning-content" id="modal-warning-content">
+
+
+         <!-- <div class="leave-current-order" id="leave-current-order"> -->
+  
+            <div style="text-align: center; margin-top: 20px;">
+              You currently have an incomplete order with another restaurant, you can only place one order
+              at a time. <br>
+              Are you sure you want to place a new order?
+            </div>
+          
+            <div style="
+              display: grid; 
+              grid-template-columns: 1fr 1fr; 
+              
+            ">
+                <button class = "confirmation-button" id="warning-go-back">
+                  No, go back
+                </button>
+                <button  class = "confirmation-button" id="warning-start-new-order">
+                  Yes, I want to start new order
+                </button>
+          
+            </div>
+          
+         <!-- </div> 
+        -->
+          
+
+
+        </div>
+          <span id="close-modal-warning" class="close-modal-warning">&times;</span>
+      </div>
+    </div>
+    
+    <!--This is the WARNING pop up -->
+
+
+
+
+
+  </body>
+
+  <script src="js/data/restaurantData.js"></script>
+  <script src="js/data/foodData.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/pagesetting.js"></script>
+  <script src="js/warningmodal.js"></script>
+
+
+
+</html>

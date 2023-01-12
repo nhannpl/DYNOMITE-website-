@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/header.css">
+
+  </head>
+  <body class="main-page-body">
+    <div class="header">
+      <div class="left-section">
+        <img class="header-picture" src="pictures/UM-Logo.svg" style="cursor: pointer" onclick="location.href='index.html'">
+        
+          <button class="home-button">
+            <a class="home-button-link" href="index.html">
+             <img class="home-icon" src="icons/home.png">
+            </a>
+          </button>
+        
+      </div>
+
+      <div class="middle-section">
+        <input class="search-bar" id="searchBar" type="textbox" placeholder="Search Restaurants...">
+
+        
+          <button class="search-button" id="searchButton">
+            <a class="search-button-link">
+              <img class="search-icon" src="icons/search.svg">
+            </a>
+          </button>
+      
+      </div>
+
+      <div class="right-section">
+        <button class="page-setting" id="page-setting">
+          <img class="account-icon" src="icons/hamburger-menu.svg">
+        </button>
+      </div>
+    </div>
+
+    <div class="background">
+
+      <div class = "introduction-text">
+        <h1 style="
+          text-shadow: 2px 2px 5px black;">
+          Did somebody say let's get food?
+        </h1>
+        <p style="
+        text-shadow: 2px 2px 5px black;">
+          Order from over 100 food options on the Dynomite Website
+        </p>
+      </div>
+
+      <div style = "display: flex;
+        flex-direction: row;
+        flex: 0.75;
+        align-items: center;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 100px;
+      ">
+
+        <div>
+          <a class="main-page-button-link" href="listview.html">
+            <button class = "view-button" style="
+            text-shadow: 2px 2px 5px black;">
+            LIST VIEW
+            </button>
+          </a>
+        </div>
+
+        <div>
+          <a class="main-page-button-link" href="mapview.html">
+            <button  class = "view-button" style="
+            text-shadow: 2px 2px 5px black;">
+              MAP VIEW
+            </button>
+          </a>
+        </div>
+
+      </div>
+    </div> 
+
+    <div class="footer">
+
+      <div class = "restrictions-footer">
+  
+        <div class = "dietary-title" >
+          Dietary Restrictions (Tags)
+        </div>
+  
+        <div class = "dietary-tags">
+  
+          <div class="individual-tags">
+            <img class = "tag" src = "pictures/Halal.png">
+            <p class = "tag-title" style="padding-left:12px;">Halal</p>
+          </div>
+
+          <div class="individual-tags">
+            <img class = "tag" src = "pictures/vegitarian.png">
+            <p class = "tag-title" style="">Vegetarian</p>
+          </div>
+
+          <div class="individual-tags">
+            <img class = "tag" src = "pictures/gluten free.png">
+            <p class = "tag-title" style="">Gluten-Free</p>
+          </div>
+
+          <div class="individual-tags">
+            <img class = "tag" src = "pictures/contains nuts.png">
+            <p class = "tag-title" style="">No-Nuts</p>
+          </div>
+
+          <div class="individual-tags">
+            <img class = "tag" src = "pictures/low fat.png">
+            <p class = "tag-title" style="">Low Fat</p>
+          </div>
+
+          <div class="individual-tags">
+            <img class = "tag" src = "pictures/no sugar.png">
+            <p class = "tag-title" style="">No Sugar</p>
+          </div>
+  
+        </div>
+  
+  
+      </div>
+  
+      <div  class = "contact-information">
+  
+        <ul class="footer-links">
+          <li>
+            <a class = "links" href="https://forms.gle/YtXNfVWAn6QxY64r6" target="_blank">
+              Submit Feedback
+            </a>
+          </li>
+          <li>
+            <a class =  "links" href="https://forms.gle/nEP41C5CEWRfdTHD6" target="_blank">
+              Rate a Restaurant
+            </a>
+          </li>
+          <li>
+            <a class = "links" href="mailto: aderinto@myumanitoba.ca">
+              Contact Us
+            </a>
+          </li>
+          
+       </ul>
+  
+      </div>
+  
+    </div>
+
+<!--THis is the page setting (hamburger menu) pop up -->
+
+<div id="modal" class="modal close">
+  <div class="modal-container" id="modal-container">
+    <div class="modal-content" id="modal-content">
+      <p class="login-text">You are already logged in!</p>
+      <button id="login-OK" class="login-OK-button">OK</button>
+    </div>
+      <span id="close-modal" class="close-modal">&times;</span>
+  </div>
+</div>
+
+<!--This is the page setting (hamburger menu) pop up -->
+
+  </body>
+
+  <script src="js/search.js"></script>
+  <script src="js/pagesetting.js"></script>
+
+</html>
