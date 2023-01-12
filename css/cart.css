@@ -1,0 +1,616 @@
+.cart{
+  position: fixed;
+  right: 15px;
+  top: 70px;
+  width: 150px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+
+  background-color: #ffb555;
+
+  display: flex;
+  justify-content:space-between;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: rgb(196, 196, 196);
+}
+
+.cart-spacer{
+  width: 8px;
+}
+
+.cart-pane{
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 5px;
+}
+
+.cart-title{
+  font-size: 20px;
+  font-weight: 700;
+  height: 30px;
+  margin-left: 4px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+}
+
+.cart-item-container{
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.cart-item{
+  flex: 1;
+  display: flex;
+
+  justify-content:space-between;
+
+}
+.item-name{
+  flex: 1;
+  font-size: small;
+
+  padding-right: 5px;
+
+  font-style: italic;
+}
+.item-clear-all-button{
+
+  margin: 0px;
+  margin-left: 5px;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+
+  background-color: white;
+}
+.item-clear-all-button:hover {
+  transform: scale(1.1);
+}
+
+.delete-icon{
+  width: 15px;
+  padding-top: 2px;
+}
+
+.button-pane{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  margin-top: 10px;
+  
+}
+
+.pay-now-button{
+  margin-top: 5px;
+  height: 30px;
+  width: 75%;
+  
+  margin-left: 14px;
+  margin-right: 10px;
+
+  font-weight: bold;
+
+  margin-left: 10px;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: none;
+
+  transition: all 0.2s ease-in-out;
+
+  background-color: white;
+}
+.pay-now-button:hover{
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+  transform: scale(1.05);
+}
+
+.QR-pane{
+  display: flex;
+  padding-left: 10px;
+  column-gap: 5px;
+}
+
+.QR-button{
+  height: 40px;
+  width: 85px;
+
+  font-weight: bold;
+
+  border-radius: 10px;
+  border: none;
+
+  transition: all 0.2s ease-in-out;
+
+  background-color: white;
+}
+.QR-button:hover{
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+  transform: scale(1.05);
+}
+
+.help-button{
+  height: 40px;
+  width: 22px;
+
+  font-weight: bold;
+
+  border-radius: 10px;
+  border: none;
+
+  transition: all 0.2s ease-in-out;
+
+  background-color: white;
+}
+.help-button:hover{
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+
+  transform: scale(1.05);
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+}
+
+/*
+.open-modal {
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s linear;
+}
+.open-modal:hover {
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-color: #fff;
+}
+*/
+.modal-pay-now {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal-pay-now.open {
+  display: flex;
+}
+.modal-pay-now-container {
+  
+  background-color: #fff;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+
+
+
+  /*border-style: solid;*/
+  width: 400px;
+  height: 300px;
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr;
+  background-color: white;
+  border-radius: 10px;
+}
+.modal-pay-now.open .modal-pay-now-container {
+  animation: move 0.6s ease-out;
+}
+@keyframes move {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.modal-pay-now-content {
+}
+.modal-content > *:not(img) {
+  padding: 0 1rem;
+}
+.modal-pay-now-content h2 {
+  margin: 1.5rem 0 0.6rem 0;
+}
+.modal-pay-now-content p {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.modal-pay-now-content a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+.modal-pay-now-content a:hover {
+  color: salmon;
+}
+
+.close-modal-pay-now {
+  display: none;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: color 0.15s linear;
+}
+.close-modal-pay-now:hover {
+  color: #f00;
+}
+
+
+
+.modal-QR {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal-QR.open {
+  display: flex;
+}
+.modal-QR-container {
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  
+  row-gap: 10px;
+
+  margin: 0px;
+  padding: 0px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 50vw;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30px;
+
+  background-color: #f1ba71;
+
+
+}
+.modal-QR.open .modal-QR-container {
+  animation: move 0.6s ease-out;
+}
+@keyframes move {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.modal-QR-content {
+}
+.modal-QR-content > *:not(img) {
+  padding: 0 1rem;
+}
+.modal-QR-content h2 {
+  margin: 1.5rem 0 0.6rem 0;
+}
+.modal-QR-content p {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.modal-QR-content a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+.modal-QR-content a:hover {
+  color: salmon;
+}
+
+.close-modal-QR {
+  display: none;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: color 0.15s linear;
+}
+.close-modal-QR:hover {
+  color: #f00;
+}
+
+
+.QR-popup{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  
+  row-gap: 10px;
+
+  margin: 0px;
+  padding: 0px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 50vw;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30px;
+
+  background-color: #f5bc73;
+}
+
+.QR-text{
+  margin: 10px;
+  padding: 0px;
+  font-size: 30px;
+  text-align-last: center;
+
+  font-weight: bold;
+}
+
+.QR-icon{
+  width: 280px;
+
+  border-radius: 10px;
+  margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+.QR-buttons-container{
+  margin-top: 5px;
+}
+.QR-button1,
+.QR-button2{
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.QR-button2{
+  width: 190px;
+  height: 50px;
+}
+
+.QR-button1{
+  margin-left: 55px;
+  width: 100px;
+  height: 50px;
+}
+
+.QR-help-button{
+  width: 100px;
+  height: 50px;
+  margin-left: 130px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  background-color: white;
+
+  transition: all 0.2s ease-in-out;
+}
+.QR-help-button:hover{
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+  transform: scale(1.05);
+}
+
+
+.QR-button1:hover,
+.QR-button2:hover{
+  cursor: pointer;
+  background:  rgb(226, 226, 226);
+  border: none;
+  transform: scale(1.05);
+}
+
+
+
+
+
+.modal-pay-now-content { 
+	border-style: solid;
+  width: 400px;
+  height: 300px;
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr;
+  background-color:#f5bc73;
+  border-radius: 10px;
+  border-width: 1px;
+} 
+.modal-pay-now-content:hover { 
+
+} 
+
+.leave-current-order { 
+	border-style: solid;
+  width: 400px;
+  height: 250px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  border-radius: 10px;
+  
+} 
+.leave-current-order:hover { 
+
+} 
+.confirmation-button {
+  width: 120px;
+  height: 65px;
+  margin-top: 35px;
+  background-color:white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-items: center;
+  margin-right: 0;
+  margin-left:35px;
+  font-weight: bold;
+}
+
+.confirmation-button:hover {
+  background-color:rgb(226, 226, 226);
+}
+
+.continue-shopping-button {
+  margin-top: 25px;
+  margin-left: 100px;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  background-color:white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.continue-shopping-button:hover {
+  background-color: rgb(226, 226, 226);
+  transform: scale(1.05);
+}
+
+
+.modal-warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal-warning.open {
+  display: flex;
+}
+.modal-warning-container {
+  background-color: #f1ba71;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+
+  
+	border-style: solid;
+  width: 400px;
+  height: 250px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  border-radius: 10px;
+  border-width: 1px;
+
+}
+.modal-warning.open .modal-warning-container {
+  animation: move 0.6s ease-out;
+}
+@keyframes move {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.modal-warning-content {
+}
+.modal-warning-content > *:not(img) {
+  padding: 0 1rem;
+}
+.modal-warning-content h2 {
+  margin: 1.5rem 0 0.6rem 0;
+}
+.modal-warning-content p {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.modal-warning-content a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+.modal-warning-content a:hover {
+  color: salmon;
+}
+
+.close-modal-warning {
+  display: none;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: color 0.15s linear;
+}
+.close-modal-warning:hover {
+  color: #f00;
+  cursor:pointer;
+}

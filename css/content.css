@@ -1,0 +1,305 @@
+
+.website-content{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  row-gap: 15px;
+
+  padding-left: 10px;
+}
+
+
+.main-page-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  
+  
+}
+
+.main-page-button-pane{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  flex: 1;
+  
+  display: flex;
+  column-gap: 40px;
+
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+
+.main-page-tags-pane{
+  flex: 1;
+}
+
+.main-page-button{
+  height: 100px;
+  width: 200px;
+
+  border-radius: 10px;
+  border: none;
+}
+
+.main-page-button:hover{
+  cursor: pointer;
+}
+
+.main-page-button-link{
+  height: 100px;
+  width: 200px;
+}
+
+.restaurant-page-title-container{
+  display: flex;
+
+  justify-content: space-between;
+  padding-right: 15px;
+
+  height: 60px;
+
+  align-items: center;
+
+  border-radius: 10px;
+
+  background-color: #ffb555;
+}
+.restaurant-page-title{
+  padding-left: 20px;
+  min-width: 330px;
+
+  font-size: 30px;
+  
+
+}
+
+.restaurant-hours-location-container{
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 20px;
+
+}
+.hours-location-title{
+  min-width: 205px;
+
+  font-size: 14px;
+}
+
+.food-card-container{
+  height: 80px;
+
+  min-width: 500px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: rgb(241, 241, 241);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.2s ease-in-out;
+}
+.food-card-container:hover{
+  transform: scale(1.02);
+}
+
+.food-picture-container{
+  width: 40px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.food-card-description-container{
+  flex: 2;
+  width: 60%;
+
+  min-width: 230px;
+  
+  border-right-style: solid;
+  border-right-width: 1px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  
+
+
+}
+
+.tags-container{
+  width: 140px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  display: flex;
+  column-gap: 10px;
+
+
+
+  height: 38.18px;
+
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+@media only screen and (max-width: 950px){
+    #tags-box{
+      display: none;
+    }
+    #menu{
+      width: 500px;
+    }
+    #restaurant-title {
+      width: 500px;
+    }
+    #hours {
+      display: none;
+    }
+}
+
+.price-and-counter-container{
+  flex: 1;
+
+  min-width: 150px;
+
+  display: flex;
+
+  height: 38.18px;
+  justify-content:space-around;
+
+  vertical-align: middle;
+  align-items: center;
+
+}
+
+.food-picture{
+  width: 40px;
+
+  padding-top: 4px;
+
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.food-picture:hover{
+  transform: scale(1.1);
+}
+
+.tag-picture{
+  width: 40px;
+  border-radius: 20px;
+
+  transition: all 0.2s ease-in-out;
+}
+.tag-picture:hover{
+  transform: scale(1.1);
+}
+
+.food-name{
+  flex: 1;
+  vertical-align: center;
+
+  font-size: large;
+  font-weight: bold;
+}
+
+.food-description{
+  flex: 1;
+  
+}
+
+.price{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.counter-container{
+
+  flex: 1;
+
+  display: flex;
+
+  padding: 0px;
+  margin-right: 5px;
+
+  height: 38.18px;
+
+  vertical-align: middle;
+  align-items: center;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color:rgb(220, 219, 219);
+
+  background-color: #fdf7e9;
+}
+
+.item-count-container{
+  flex: 1;
+}
+
+.button-container{
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.item-count{
+  text-align: center;
+}
+
+.plus-button{
+  border-top-right-radius: 10px;
+  margin-bottom: 3px;
+  margin-right: -1px;
+  border-width: 0px;
+  border-bottom-color: rgb(241, 241, 241);
+  background-color: #ffb555;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+.plus-button:hover{
+  cursor: pointer;
+  background-color: #de9a41;
+  transform: scale(1.1);
+}
+
+.minus-button{
+  border-bottom-right-radius: 10px;
+  margin-right: -1px;
+  border-width: 0px;
+
+  background-color: #ffb555;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+.minus-button:hover{
+  cursor: pointer;
+  background-color: #de9a41;
+  transform: scale(1.1);
+}
+
+.plus-text{
+  font-weight: bolder;
+}
+
+.minus-text{
+  font-weight: bolder;
+}
+
+
+
+
+

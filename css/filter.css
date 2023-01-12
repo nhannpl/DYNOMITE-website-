@@ -1,0 +1,89 @@
+.filter{
+  position: fixed;
+  left: 15px;
+  top: 70px;
+  width: 130px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+
+  background-color: #ffb555;
+
+  display: flex;
+  justify-content:space-between;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: rgb(196, 196, 196);
+}
+.filter-spacer{
+  width: 8px;
+}
+.filter-pane{
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 5px;
+}
+.filter-title{
+  font-size: 25px;
+  font-weight: 700;
+  height: 30px;
+  margin-left: 4px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+}
+.filter-category{
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  margin-top: 5px;
+}
+.filter-category-title{
+  font-size: 18px;
+  font-weight: 500;
+
+  padding-left: 4px;
+}
+.category-option{
+  display: flex;
+  align-items: center;
+
+  margin-top: 4px;
+  margin-left: 4px;
+}
+.category-option-checkbox{
+  height: 15px;
+}
+.category-option-title{
+  margin-left: 4px;
+
+  font-weight: 300;
+}
+.filter-search-button{
+  margin-top: 5px;
+  height: 30px;
+  width: 75%;
+  
+  margin-left: 14px;
+  margin-right: 10px;
+
+  font-weight: bold;
+
+  margin-left: 10px;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: none;
+
+  background-color: white;
+}
+.filter-search-button:hover{
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+}
